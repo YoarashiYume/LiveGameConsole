@@ -20,7 +20,7 @@ void Field::findNeighbors(Cell& curr)
 	for (auto& el : arr)
 	{
 		std::int64_t nextX = static_cast<int64_t>(currX + std::get<0>(el));
-		std::int64_t nextY = static_cast<int64_t>(currY + std::get<0>(el));
+		std::int64_t nextY = static_cast<int64_t>(currY + std::get<1>(el));
 		if (nextX >= 0 && nextY >= 0 && nextX < size && nextY < size)
 			curr.addNeighbors(cellList.at(nextY + nextX * this->size));
 	}
